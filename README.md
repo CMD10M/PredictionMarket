@@ -31,8 +31,9 @@ Install the additional dependency in the packages/react-app/src folder - ant-des
 
 📝 Edit your frontend App.jsx in packages/react-app/src
 
-Change the future ETH price to bet on (line 16 in PredictionMarket.sol & line 357 in app.jsx file)
+Change the future ETH price to bet on (line 16 in PredictionMarket.sol & line 358 in app.jsx file)
 
-Change the future date for which you want the bet to finish in unix time (line 17 in PredictionMarket.sol & line 358 in app.jsx file)
+Change the future date for which you want the bet to finish in unix time (line 17 in PredictionMarket.sol & line 359 in app.jsx file)
 
-📱 Open http://localhost:3000 to see the app# PredictionMarket
+📱 Open http://localhost:3000 to see the Prediction Market
+# PredictionMarket
