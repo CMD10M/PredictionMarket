@@ -14,7 +14,7 @@ contract PredictionMarket {
 
   //user can specify this
   int256 futureEthPrice = 1500 * 100000000;
-  uint256 futureTimeStamp = 1674685832;
+  uint256 futureTimeStamp = 1674686732;
 
   bool public yeswon;
   uint256 public loserBets;

@@ -284,6 +284,7 @@ function App(props) {
 
   const [betWithdrawing, setbetWithdrawing] = useState();
   const [isWithdrawAmountApproved, setisWithdrawAmountApproved] = useState();
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   useEffect(() => {
     const betWithdrawAmountBN = betWithdrawAmount.valid ? ethers.utils.parseEther("" + betWithdrawAmount.value) : 0;
@@ -356,7 +357,7 @@ function App(props) {
 
   // Match this with smart contract inputs for future ethprice and future timestamp
   const futurePriceofETH = 1500;
-  const futureTimeStamp = 1674685832;
+  const futureTimeStamp = 1674686732;
 
   const futureDate = new Date(futureTimeStamp * 1000);
   const monthNames = [
@@ -377,7 +378,7 @@ function App(props) {
   const futureMonthName = monthNames[futureDate.getUTCMonth()];
   const futureYear = futureDate.getUTCFullYear();
   const today = Math.floor(Date.now() / 1000);
-  let timeRemaining = ((futureTimeStamp - today) / 3600).toFixed(2);
+  let timeRemaining = futureTimeStamp - today + 55;
   if (timeRemaining < 0) {
     timeRemaining = 0;
     yesWon = yesWon;
@@ -399,18 +400,19 @@ function App(props) {
         </Card>
         <Divider></Divider>
         <Card style={{ marginTop: 20, width: 250, textAlign: "center", margin: "auto" }}>
-          <h3 style={{ textAlign: "center", margin: "auto" }}> {timeRemaining} Hours Remaining</h3>
+          <h3 style={{ textAlign: "center", margin: "auto" }}> {timeRemaining} Seconds Remaining</h3>
           <div style={{ padding: 8 }}> </div>
           <Button
             type={"primary"}
             onClick={async () => {
               await tx(writeContracts.PredictionMarket.reportResult());
+              setButtonClicked(true);
             }}
           >
             Check Result!
           </Button>
           <div style={{ padding: 8 }}> </div>
-          {yesWon !== null ? yesWon ? <p>Yes won!</p> : <p>No won!</p> : null}
+          {buttonClicked && yesWon !== null ? yesWon ? <p>Yes won!</p> : <p>No won!</p> : null}
         </Card>
 
         <Divider></Divider>

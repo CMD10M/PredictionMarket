@@ -1,3 +1,5 @@
+# PredictionMarket
+
 The Prediction Market allows users to place bets on a specific event with a yes or no outcome. The event's outcome is determined by the price of Ether (ETH) at a specified timestamp in the future, which is set by the "futureTimeStamp" variable. The price of ETH is obtained from the Chainlink price feeds smart contract through the "latestRoundData" function.
 
 Users can place bets by calling the "placeBet" function and specifying whether they want to bet on "Yes" or "No". The value of their bet is specified in the "msg.value" variable, which is the amount of Ether sent with the function call. The bets are stored in the "bets" and "betsPerGambler" mappings, where the latter keeps track of the bets of each user.
@@ -36,4 +38,4 @@ Change the future ETH price to bet on (line 16 in PredictionMarket.sol & line 35
 Change the future date for which you want the bet to finish in unix time (line 17 in PredictionMarket.sol & line 359 in app.jsx file)
 
 📱 Open http://localhost:3000 to see the Prediction Market
-# PredictionMarket
+
