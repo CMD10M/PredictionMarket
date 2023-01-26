@@ -12,7 +12,7 @@ The contract also has a "getTimestamp" function that returns the current block t
 
 <a href="https://ibb.co/HnBfGdn"><img src="https://i.ibb.co/xJXtzHJ/Prediction-Market.png" alt="Prediction-Market" border="0" /></a>
 
-Instructions:
+# Instructions
 
 🏄‍♂️ Quick Start
 Prerequisites: Node (v16 LTS) plus Yarn and Git
