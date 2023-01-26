@@ -10,7 +10,7 @@ Users can then call the "withdrawGain" function to retrieve their winnings. The 
 
 The contract also has a "getTimestamp" function that returns the current block timestamp, and "getPrice" function which returns the current Ether price by calling the "latestRoundData" function from the Chainlink contract.
 
-![Alt text](https://cmd10m.imgbb.com/ "Prediction Market")
+<a href="https://ibb.co/HnBfGdn"><img src="https://i.ibb.co/xJXtzHJ/Prediction-Market.png" alt="Prediction-Market" border="0" /></a>
 
 Instructions:
 
